@@ -11,12 +11,12 @@ const brand = {
   primaryGlow: "#F4CE14",
 }
 
-const stats = [
-  { value: "50+", label: "Projects delivered" },
-  { value: "30+", label: "Clients worldwide" },
-  { value: "6+", label: "Years in business" },
-  { value: "98%", label: "On-time delivery" },
-]
+// const stats = [
+//   { value: "50+", label: "Projects delivered" },
+//   { value: "30+", label: "Clients worldwide" },
+//   { value: "6+", label: "Years in business" },
+//   { value: "98%", label: "On-time delivery" },
+// ]
 
 const services = [
   {
@@ -91,15 +91,15 @@ const reasons = [
   },
   {
     title: "Accountability at every step",
-    body: "You always know who owns what, what's been done, and what's next — no hand-offs, no ambiguity.",
+    body: "You always know who owns what, what's been done, and what's next no hand-offs, no ambiguity.",
   },
   {
     title: "Works inside your existing stack",
-    body: "We join your Slack, use your Jira, and adapt — you don't rebuild your workflow around us.",
+    body: "We join your Slack, use your Jira, and adapt you don't rebuild your workflow around us.",
   },
   {
     title: "Fixed-scope or ongoing retainer",
-    body: "One-time build, a feature sprint, or long-term product support — structured around what you need.",
+    body: "One-time build, a feature sprint, or long-term product support structured around what you need.",
   },
 ]
 
@@ -182,7 +182,7 @@ export default function Home() {
       </section>
 
       {/* ── STATS BAR ── */}
-      <section className="border-b border-gray-100">
+      {/* <section className="border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-6 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0 md:divide-x divide-gray-100">
             {stats.map((s) => (
@@ -193,7 +193,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── SERVICES ── */}
       <section className="max-w-6xl mx-auto px-6 py-20 md:py-28">
@@ -327,7 +327,7 @@ export default function Home() {
                 Ready to build something?
               </h2>
               <p className="mt-3 leading-relaxed" style={{ color: "#5a4800" }}>
-                Tell us what you need. We'll come back with a clear proposal within one business day —
+                Tell us what you need. We'll come back with a clear proposal within one business day
                 no commitment required.
               </p>
             </div>

@@ -20,38 +20,61 @@ const footerSections: FooterSection[] = [
     links: [
       { name: 'About Us', href: '/about' },
       { name: 'Services', href: '/services' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Blog', href: '/blog' },
+      { name: 'Contact', href: '/contact' },
     ],
   },
   {
     title: 'Services',
     links: [
-      { name: 'Web Development', href: '/services/web-development' },
-      { name: 'Mobile Apps', href: '/services/mobile-apps' },
-      { name: 'UI/UX Design', href: '/services/ui-ux-design' },
-      { name: 'Consulting', href: '/services/consulting' },
+      { name: 'Website Development', href: '/services#web-development' },
+      { name: 'Website Maintenance', href: '/services#maintenance' },
+      { name: 'Mobile App Development', href: '/services#mobile-apps' },
+      { name: 'Video Editing', href: '/services#video-editing' },
+      { name: 'Graphic Design', href: '/services#graphic-design' },
+      { name: 'Digital Marketing', href: '/services#digital-marketing' },
     ],
   },
   {
-    title: 'Support',
+    title: 'Legal',
     links: [
-      { name: 'Contact', href: '/contact' },
-      { name: 'FAQ', href: '/faq' },
       { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
+      { name: 'Terms & Conditions', href: '/terms' },
     ],
+  },
+]
+
+const contactDetails = [
+  {
+    label: 'Email',
+    value: 'nepalexportingit2082@gmail.com',
+    href: 'mailto:nepalexportingit2082@gmail.com',
+    icon: (
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    ),
+  },
+  {
+    label: 'Phone / WhatsApp',
+    value: '+977-9823687080',
+    href: 'tel:+977-9823687080',
+    icon: (
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+      </svg>
+    ),
   },
 ]
 
 const socialLinks = [
   {
-    name: 'Twitter',
-    href: 'https://twitter.com',
+    name: 'Instagram',
+    href: 'https://www.instagram.com/nepalexportingit/',
     icon: (
-      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-      </svg>
+    <svg
+      className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M7.75 2C4.574 2 2 4.574 2 7.75v8.5C2 19.426 4.574 22 7.75 22h8.5C19.426 22 22 19.426 22 16.25v-8.5C22 4.574 19.426 2 16.25 2h-8.5zm0 1.8h8.5a3.95 3.95 0 013.95 3.95v8.5a3.95 3.95 0 01-3.95 3.95h-8.5a3.95 3.95 0 01-3.95-3.95v-8.5A3.95 3.95 0 017.75 3.8zm8.95 1.35a1.15 1.15 0 100 2.3 1.15 1.15 0 000-2.3zM12 7a5 5 0 100 10 5 5 0 000-10zm0 1.8A3.2 3.2 0 1112 15.2 3.2 3.2 0 0112 8.8z" />
+    </svg>
     ),
   },
   {
@@ -74,7 +97,7 @@ const socialLinks = [
   },
   {
     name: 'GitHub',
-    href: 'https://github.com',
+    href: 'https://github.com/orgs/NepalExportingIT',
     icon: (
       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
         <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
@@ -95,17 +118,17 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Main Footer Content */}
         <div className="py-12 sm:py-16">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12">
             {/* Brand Column */}
-            <div className="col-span-2">
+            <div className="sm:col-span-2">
               <Link href="/" className="flex items-center gap-2.5 mb-4">
                 <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-gradient-to-br from-amber-50 to-amber-100 border border-amber-200/50 shadow-sm">
                   <Image
-                    src="/images/logo.svg"
+                    src="/images/logo.png"
                     alt="Nepal Exporting IT"
-                    width={22}
-                    height={22}
-                    className="object-contain"
+                    width={24}
+                    height={24}
+                    className="object-contain w-6 h-6" 
                   />
                 </div>
                 <div className="flex flex-col leading-none">
@@ -122,6 +145,22 @@ export default function Footer() {
                 Crafting digital experiences that bridge Nepal's tech talent with global opportunities. 
                 We build, innovate, and export excellence.
               </p>
+
+              {/* Contact Details */}
+              <div className="flex flex-col gap-2 mb-5">
+                {contactDetails.map((item) => (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="inline-flex items-center gap-2.5 text-sm text-gray-500 hover:text-amber-500 transition-colors duration-200 group"
+                  >
+                    <span className="w-7 h-7 flex items-center justify-center rounded-lg bg-amber-50 border border-amber-200/50 text-amber-500 group-hover:bg-amber-100 transition-colors duration-200 flex-shrink-0">
+                      {item.icon}
+                    </span>
+                    <span>{item.value}</span>
+                  </a>
+                ))}
+              </div>
               
               {/* Social Links */}
               <div className="flex items-center gap-3">
@@ -148,7 +187,7 @@ export default function Footer() {
                 </h3>
                 <ul className="space-y-2.5">
                   {section.links.map((link) => {
-                    const isActive = pathname === link.href
+                    const isActive = !link.href.includes('#') && pathname === link.href
                     return (
                       <li key={link.name}>
                         <Link

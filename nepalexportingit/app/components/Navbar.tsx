@@ -61,7 +61,7 @@ export default function Navbar() {
                   alt="Nepal Exporting IT"
                   width={24}
                   height={24}
-                  className="object-contain"
+                  className="object-contain w-6 h-6"
                 />
               </div>
               <div className="flex flex-col leading-none">
