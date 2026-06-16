@@ -38,7 +38,7 @@ const contactInfo = [
       </svg>
     ),
     label: "Phone / WhatsApp",
-    value: "+977-9823687080 ",
+    value: "+977-9823687080",
     href: "tel:+977-9823687080",
   },
   {
@@ -66,6 +66,8 @@ const contactInfo = [
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState("")
   const [form, setForm] = useState({ name: "", email: "", service: "", message: "" })
 
   const handleChange = (
@@ -74,10 +76,28 @@ export default function Contact() {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // TODO: wire this up to your email service / API endpoint
-    setSubmitted(true)
+    setLoading(true)
+    setError("")
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      })
+
+      if (res.ok) {
+        setSubmitted(true)
+      } else {
+        setError("Something went wrong. Please try again or email us directly.")
+      }
+    } catch {
+      setError("Something went wrong. Please try again or email us directly.")
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -149,7 +169,7 @@ export default function Contact() {
               </h3>
               <p className="text-sm leading-relaxed" style={{ color: brand.primaryDark }}>
                 <span className="opacity-90">
-                  Mention it in the form and we'll set up a time that works across timezones
+                  Mention it in the form and we'll set up a time that works across timezones —
                   no pressure, just a conversation about what you need.
                 </span>
               </p>
@@ -171,7 +191,7 @@ export default function Contact() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-1.5">Message sent</h3>
+                <h3 className="text-lg font-bold text-gray-900 mb-1.5">Message sent!</h3>
                 <p className="text-sm text-gray-600 max-w-sm mx-auto leading-relaxed">
                   Thanks for reaching out — we'll get back to you within one business day.
                 </p>
@@ -206,7 +226,7 @@ export default function Contact() {
                       required
                       value={form.email}
                       onChange={handleChange}
-                      placeholder="Email@company.com"
+                      placeholder="email@company.com"
                       className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 transition-shadow"
                       style={{ "--tw-ring-color": brand.primaryBorder } as React.CSSProperties}
                     />
@@ -249,17 +269,34 @@ export default function Contact() {
                   />
                 </div>
 
+                {error && (
+                  <p className="text-sm text-red-500 font-medium">{error}</p>
+                )}
+
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-gray-900 text-sm font-bold rounded-xl transition-all duration-200 shadow-sm"
+                  disabled={loading}
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-gray-900 text-sm font-bold rounded-xl transition-all duration-200 shadow-sm disabled:opacity-60 disabled:cursor-not-allowed"
                   style={{ backgroundColor: brand.primary }}
-                  onMouseEnter={e => (e.currentTarget.style.backgroundColor = brand.primaryHover)}
-                  onMouseLeave={e => (e.currentTarget.style.backgroundColor = brand.primary)}
+                  onMouseEnter={e => { if (!loading) e.currentTarget.style.backgroundColor = brand.primaryHover }}
+                  onMouseLeave={e => { if (!loading) e.currentTarget.style.backgroundColor = brand.primary }}
                 >
-                  Send message
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
+                  {loading ? (
+                    <>
+                      <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                      </svg>
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      Send message
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </>
+                  )}
                 </button>
 
                 <p className="text-xs text-gray-400 leading-relaxed">
