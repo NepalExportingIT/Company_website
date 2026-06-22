@@ -38,8 +38,25 @@ const contactInfo = [
       </svg>
     ),
     label: "Phone / WhatsApp",
-    value: "+977-9823687080",
-    href: "tel:+977-9823687080",
+    value: (
+      <div className="flex flex-col gap-1">
+        <a 
+          href="tel:+52-729-916-5906" 
+          className="text-sm font-medium text-gray-900 hover:underline"
+          style={{ textDecorationColor: brand.primaryDark }}
+        >
+          +52-729-916-5906 (Mexico)
+        </a>
+        <a 
+          href="tel:+977-9741-812578" 
+          className="text-sm font-medium text-gray-900 hover:underline"
+          style={{ textDecorationColor: brand.primaryDark }}
+        >
+          +977-9741-812578 (Nepal)
+        </a>
+      </div>
+    ),
+    href: undefined,
   },
   {
     icon: (
@@ -153,7 +170,7 @@ export default function Contact() {
                         {item.value}
                       </a>
                     ) : (
-                      <p className="text-sm font-medium text-gray-900">{item.value}</p>
+                      <div className="text-sm font-medium text-gray-900">{item.value}</div>
                     )}
                   </div>
                 </div>
