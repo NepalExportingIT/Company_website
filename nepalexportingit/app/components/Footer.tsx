@@ -59,11 +59,11 @@ const contactDetails = [
     value: (
       <div className="flex flex-col gap-0.5">
         <a 
-          href="tel:+52-729-916-5906" 
+          href="tel:+977-9823-687080" 
           className="hover:underline"
           style={{ textDecorationColor: '#b89a0c' }}
         >
-          +52-729-916-5906 (Mexico)
+          +977-9823-687080 (Mexico)
         </a>
         <a 
           href="tel:+977-9741-812578" 
