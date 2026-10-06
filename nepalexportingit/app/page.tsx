@@ -115,23 +115,23 @@ export default function Home() {
     <main className="bg-white text-gray-900">
 
       {/* ── HERO ── */}
-      <section className="relative overflow-hidden border-b border-gray-100">
+      <section className="relative overflow-hidden border-b border-gray-100 bg-[#fffefa]">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0"
           style={{
             backgroundImage:
-              "linear-gradient(to right, #f3f4f6 1px, transparent 1px), linear-gradient(to bottom, #f3f4f6 1px, transparent 1px)",
-            backgroundSize: "48px 48px",
+              "linear-gradient(to right, #f9fafb 1px, transparent 1px), linear-gradient(to bottom, #f9fafb 1px, transparent 1px)",
+            backgroundSize: "64px 64px",
           }}
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute -top-40 -right-40 w-[560px] h-[560px] rounded-full opacity-[0.18]"
+          className="pointer-events-none absolute -top-40 -right-40 w-[560px] h-[560px] rounded-full opacity-[0.12]"
           style={{ background: `radial-gradient(circle, ${brand.primary} 0%, transparent 65%)` }}
         />
 
-        <div className="relative max-w-6xl mx-auto px-6 py-24 md:py-40">
+        <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-32">
           <div className="max-w-3xl">
             <div
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border mb-7"
@@ -142,12 +142,12 @@ export default function Home() {
                 style={{ backgroundColor: brand.primary }}
               />
               <span className="text-xs font-semibold tracking-wide" style={{ color: brand.primaryDark }}>
-                IT Outsourcing · Kathmandu, Nepal
+                IT Outsourcing · Khumaltar, Lalitpur, Nepal
               </span>
             </div>
 
             <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.05] tracking-tight text-gray-900">
-                Grow Your
+              Grow Your
               <br />
               <span style={{ color: brand.primaryDark }}>Business Digitally.</span>
             </h1>
@@ -214,13 +214,11 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
           {services.map((s) => (
             <div
               key={s.title}
-              className="group p-6 rounded-2xl border border-gray-100 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
-              onMouseEnter={e => (e.currentTarget.style.borderColor = brand.primaryBorder)}
-              onMouseLeave={e => (e.currentTarget.style.borderColor = "")}
+              className="group p-6 rounded-2xl border border-gray-100 hover:border-amber-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
             >
               <div
                 className="w-11 h-11 flex items-center justify-center rounded-xl mb-4 transition-colors"
@@ -251,9 +249,7 @@ export default function Home() {
             {reasons.map((r) => (
               <div
                 key={r.title}
-                className="bg-gray-900 rounded-2xl p-6 border border-gray-800 transition-colors duration-200"
-                onMouseEnter={e => (e.currentTarget.style.borderColor = brand.primaryDark)}
-                onMouseLeave={e => (e.currentTarget.style.borderColor = "")}
+                className="bg-gray-900 rounded-2xl p-6 border border-gray-800 hover:border-amber-700 transition-colors duration-200"
               >
                 <h3 className="font-semibold text-white mb-2 text-sm">{r.title}</h3>
                 <p className="text-sm text-gray-400 leading-relaxed">{r.body}</p>

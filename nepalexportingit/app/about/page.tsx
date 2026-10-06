@@ -38,7 +38,7 @@ const techAreas = [
 const faqs = [
   {
     q: "Where are you based, and does that affect communication?",
-    a: "We're based in Kathmandu, Nepal. We work in overlap-friendly hours with clients in Europe, Australia, and Asia. All communication is in English, and we use whatever tools you already use Slack, Teams, email.",
+    a: "We're based in Khumaltar, Lalitpur, Nepal. We work in overlap-friendly hours with clients in Europe, Australia, and Asia. All communication is in English, and we use whatever tools you already use Slack, Teams, email.",
   },
   {
     q: "How do you handle project updates and transparency?",
@@ -109,7 +109,7 @@ export default function About() {
             Who we are and how we work
           </h1>
           <p className="mt-5 text-lg text-gray-500 leading-relaxed max-w-2xl">
-            A software development firm situated in Kathmandu, Nepal. In order to create digital products 
+            A software development firm based in Khumaltar, Lalitpur, Nepal. In order to create digital products
             with the accountability and transparency that outsourcing typically lacks, we collaborate with
             startups and companies all around the world.
 

@@ -66,8 +66,8 @@ const contactInfo = [
       </svg>
     ),
     label: "Location",
-    value: "Kathmandu, Nepal",
-    href: undefined,
+    value: "Khumaltar, Lalitpur, Nepal",
+    href: "https://maps.google.com/?q=Khumaltar%2C+Lalitpur%2C+Nepal",
   },
   {
     icon: (
@@ -164,6 +164,8 @@ export default function Contact() {
                     {item.href ? (
                       <a
                         href={item.href}
+                        target={item.label === "Location" ? "_blank" : undefined}
+                        rel={item.label === "Location" ? "noopener noreferrer" : undefined}
                         className="text-sm font-medium text-gray-900 hover:underline"
                         style={{ textDecorationColor: brand.primaryDark }}
                       >
