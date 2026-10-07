@@ -44,7 +44,7 @@ const footerSections: FooterSection[] = [
 ]
 
 const cafeOfBethesdaMapUrl =
-  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3534.3184931919245!2d85.3194008!3d27.645616200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1770a1b993c3%3A0x12bfbd3709ad51d0!2sThe%20Cafe%20of%20Bethesda!5e0!3m2!1sen!2snp!4v1791348161108!5m2!1sen!2snp'
+  'https://www.google.com/maps?q=The%20Cafe%20of%20Bethesda%2C%20Khumaltar%2C%20Lalitpur%2C%20Nepal&output=embed'
 
 const contactDetails = [
   {
