@@ -43,8 +43,8 @@ const footerSections: FooterSection[] = [
   },
 ]
 
-const nepalExportingItMapUrl =
-  'https://www.google.com/maps?q=NepalExportingIT%2C%20Khumaltar%2C%20Lalitpur%2C%20Nepal&output=embed'
+const cafeOfBethesdaMapUrl =
+  'https://www.google.com/maps?q=The%20Cafe%20of%20Bethesda%2C%20Khumaltar%2C%20Lalitpur%2C%20Nepal&output=embed'
 
 const contactDetails = [
   {
@@ -87,7 +87,7 @@ const contactDetails = [
   {
     label: 'Location',
     value: 'NepalExportingIT, Khumaltar, Lalitpur, Nepal',
-    href: 'https://www.google.com/maps/search/?api=1&query=NepalExportingIT%2C%20Khumaltar%2C%20Lalitpur%2C%20Nepal',
+    href: 'https://www.google.com/maps/search/?api=1&query=The%20Cafe%20of%20Bethesda%2C%20Khumaltar%2C%20Lalitpur%2C%20Nepal',
     icon: (
       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -204,8 +204,8 @@ export default function Footer() {
               </div>
 
               <iframe
-                src={nepalExportingItMapUrl}
-                title="Map showing NepalExportingIT in Khumaltar, Lalitpur"
+                src={cafeOfBethesdaMapUrl}
+                title="Map showing The Cafe of Bethesda, where NepalExportingIT is located on the second floor"
                 className="w-full h-40 rounded-lg border border-gray-200 mb-5"
                 allowFullScreen
                 loading="lazy"
