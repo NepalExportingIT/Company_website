@@ -43,6 +43,9 @@ const footerSections: FooterSection[] = [
   },
 ]
 
+const cafeOfBethesdaMapUrl =
+  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3534.3184931919245!2d85.3194008!3d27.645616200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1770a1b993c3%3A0x12bfbd3709ad51d0!2sThe%20Cafe%20of%20Bethesda!5e0!3m2!1sen!2snp!4v1791348161108!5m2!1sen!2snp'
+
 const contactDetails = [
   {
     label: 'Email',
@@ -83,8 +86,8 @@ const contactDetails = [
   },
   {
     label: 'Location',
-    value: 'Khumaltar, Lalitpur, Nepal',
-    href: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3534.3184931919245!2d85.3194008!3d27.645616200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1770a1b993c3%3A0x12bfbd3709ad51d0!2sThe%20Cafe%20of%20Bethesda!5e0!3m2!1sen!2snp!4v1791348161108!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>',
+    value: 'The Cafe of Bethesda, Khumaltar, Lalitpur, Nepal',
+    href: 'https://www.google.com/maps/search/?api=1&query=The%20Cafe%20of%20Bethesda%2C%20Khumaltar%2C%20Lalitpur%2C%20Nepal',
     icon: (
       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -199,6 +202,15 @@ export default function Footer() {
                   </div>
                 ))}
               </div>
+
+              <iframe
+                src={cafeOfBethesdaMapUrl}
+                title="Map showing The Cafe of Bethesda in Khumaltar, Lalitpur"
+                className="w-full h-40 rounded-lg border border-gray-200 mb-5"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+              />
               
               {/* Social Links */}
               <div className="flex items-center gap-3">
