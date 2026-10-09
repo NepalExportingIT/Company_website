@@ -48,7 +48,7 @@ const contactInfo = [
           +977-9823-687080 (Mexico)
         </a>
         <a 
-          href="tel:+977-9741-812578" 
+          href="tel:+9779714559190" 
           className="text-sm font-medium text-gray-900 hover:underline"
           style={{ textDecorationColor: brand.primaryDark }}
         >

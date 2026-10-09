@@ -69,11 +69,11 @@ const contactDetails = [
           +977-9823-687080 (Mexico)
         </a>
         <a 
-          href="tel:+977-9741-812578" 
+          href="tel:+9779714559190" 
           className="hover:underline"
           style={{ textDecorationColor: '#b89a0c' }}
         >
-          +977-9741-812578 (Nepal)
+          +977-9714559190 (Nepal)
         </a>
       </div>
     ),
