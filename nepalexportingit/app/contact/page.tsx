@@ -52,7 +52,7 @@ const contactInfo = [
           className="text-sm font-medium text-gray-900 hover:underline"
           style={{ textDecorationColor: brand.primaryDark }}
         >
-          +977-9741-812578 (Nepal)
+          +977-9714559190(Nepal)
         </a>
       </div>
     ),
